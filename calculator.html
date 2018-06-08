@@ -1,0 +1,67 @@
+<html>
+<head>
+  <link href="calc.css" rel="stylesheet" />
+  <script src="calc.js"></script>
+  <script src="numberConvert.js"></script>
+</head>
+<body>
+  <form id="form">
+    <table>
+      <tr>
+        <th colspan="4">
+          <input class="textbox1" type="text" id="result" onkeypress="checkKeys()" />
+        </th>
+      </tr>
+      <tr>
+        <th colspan="4">
+          <input class="textbox2" type="text" id="rstring" />
+        </th>
+      </tr>
+      <th colspan="2">
+        <div>
+          <select class = "dropdown" id="calcType" onchange="calculatorT()">
+            <option value=standard>Standard</option>
+            <option value=scientific>Scientific</option>
+          </select></div>
+        </th>
+        <th colspan="2"><input class="reset" type="button" value="Clear" onclick="clean()" /></th>
+        <tr>
+          <td><input class="memory" type="button" value="MR" onclick="memoryFunc(3)" /></td>
+          <td><input class="memory" type="button" value="M+" onclick="memoryFunc(1)" /></td>
+          <td><input class="memory" type="button" value="M-" onclick="memoryFunc(2)" /></td>
+          <td><input class="memory" type="button" value="MC" onclick="memoryFunc(0)" /></td>
+        </tr>
+        <tr>
+          <td><input class="number" type="button" value="7" onclick="inputNumber(7)" /></td>
+          <td><input class="number" type="button" value="8" onclick="inputNumber(8)" /></td>
+          <td><input class="number" type="button" value="9" onclick="inputNumber(9)" /></td>
+          <td><input class="operator" type="button" value="x" onclick="inputOperator(4)" /></td>
+        </tr>
+        <tr>
+          <td><input class="number" type="button" value="4" onclick="inputNumber(4)" /></td>
+          <td><input class="number" type="button" value="5" onclick="inputNumber(5)" /></td>
+          <td><input class="number" type="button" value="6" onclick="inputNumber(6)" /></td>
+          <td><input class="operator" type="button" value="÷" onclick="inputOperator(3)" /></td>
+
+        </tr>
+        <tr>
+          <td><input class="number" type="button" value="1" onclick="inputNumber(1)" /></td>
+          <td><input class="number" type="button" value="2" onclick="inputNumber(2)" /></td>
+          <td><input class="number" type="button" value="3" onclick="inputNumber(3)" /></td>
+          <td><input class="operator" type="button" value="−" onclick="inputOperator(2)" /></td>
+        </tr>
+        <tr>
+          <td><input class="number" type="button" value="0" onclick="inputNumber(0)" /></td>
+          <td><input class="operator" type="button" value="." onclick="inputDPoint()" /></td>
+          <td><input class="equal" type="button" value="=" onclick="equals()" /></td>
+          <td><input class="operator" type="button" value="+" onclick="inputOperator(1)" /></td>
+        </tr>
+        <tr id= "extra" style= "visibility:hidden">
+          <td><input class="operator" type="button" value="sin" onclick="trigonometry(1)" /></td>
+          <td><input class="operator" type="button" value="cos" onclick="trigonometry(2)" /></td>
+          <td><input class="operator" type="button" value="tan" onclick="trigonometry(3)" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+  </html>
